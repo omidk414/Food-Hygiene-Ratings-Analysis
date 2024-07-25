@@ -99,6 +99,32 @@ Use `NoSQL_analysis_starter.ipynb` for this section.
 
 ## Examples
 
+## NoSQL Setup File
+### 2. Find the BusinessTypeID for "Restaurant/Cafe/Canteen" and return only the `BusinessTypeID` and `BusinessType` fields.
+python
+```
+business_type_id_query = {'BusinessType': 'Restaurant/Cafe/Canteen'}
+business_type_fields_query = {'BusinessTypeID': 1, 'BusinessType': 1}
+
+results = db.establishments.find(business_type_id_query, business_type_fields_query)
+
+for result in results:
+    pprint(result)
+```
+## NoSQL Analysis File
+### 1. Which establishments have a hygiene score equal to 20?
+python
+```
+# Find the establishments with a hygiene score of 20
+query = {"scores.Hygiene": 20}
+
+# Use count_documents to display the number of documents in the result
+total_documents = establishments.count_documents(query)
+pprint(total_documents)
+
+# Display the first document in the results using pprint
+pprint(establishments.find_one(query))
+```
 
 ### Acknowledgements
 - Study Group Members:
