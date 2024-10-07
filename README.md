@@ -7,7 +7,6 @@
 3. [Part 2: Update the Database](#part-2-update-the-database)
 4. [Part 3: Exploratory Analysis](#part-3-exploratory-analysis)
 5. [Examples](#examples)
-6. [Acknowledgements](#acknowledgements)
 
 
 ## Introduction
@@ -125,8 +124,3 @@ pprint(total_documents)
 # Display the first document in the results using pprint
 pprint(establishments.find_one(query))
 ```
-
-### Acknowledgements
-- Study Group Members:
-  - Gursimran Kaur - kaursimran081999@gmail.com - SimranBoparai
-  - Evan Wall - ewall@escoffier.edu - Ewall24
